@@ -1,0 +1,33 @@
+import java.util.Scanner;
+/*
+1111
+000
+11
+0
+for n=4
+*/
+
+public class solution {
+
+	public static void print(int n) {
+       //Write your code here
+                 int input = n;
+                 int p=2;
+                
+            for(int i=input;i>=0;i--)
+              {
+                String temp="";
+                for(int j=0;j<i;j++){
+                  if(p%2==0){
+                    temp=temp+"1";
+                  }
+                  else{
+                    temp=temp+"0";
+                  }
+                }
+                System.out.println(temp);
+                p++;
+              }
+	}
+
+}
