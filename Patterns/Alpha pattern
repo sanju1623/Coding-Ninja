@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Solution {
+/*
+A
+BB
+CCC
+DDDD
+EEEEE
+FFFFFF
+GGGGGGG
+HHHHHHHH
+IIIIIIIII
+JJJJJJJJJJ
+*\
+	public static void main(String[] args) {
+		
+		/* Your class should be named Solution.
+	 	* Read input as specified in the question.
+	 	* Print output as specified in the question.
+		*/
+              Scanner sc = new Scanner(System.in);
+              int input = sc.nextInt();
+              
+      for(int i=0;i<input;i++){
+        int p=65+i;
+        char c=(char)p;
+        for(int j=0;j<=i;j++){
+          System.out.print(c);
+        }
+        System.out.println("");
+      }		
+	}
+}
