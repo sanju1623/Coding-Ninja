@@ -1,0 +1,24 @@
+/*
+D
+CD
+BCD
+ABCD
+for input n=4;
+
+*/
+
+public class solution {
+
+	public static void print(int n) {
+		//Write your code here
+
+      String output="";
+      for(int i=n-1;i>=0;i--){
+        char a=(char)(65+i);
+        output=a+output;
+        System.out.println(output);
+      }
+    }
+  
+
+}
