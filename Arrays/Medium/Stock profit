@@ -1,0 +1,16 @@
+import java.util.*;
+import java.lang.Math.*;
+public class solution {
+
+	public static int maxProfit(int temp[])
+	{
+	//Write code here 
+      int p=0,min=temp[0];
+      for(int i=1;i<temp.length;i++){
+        p=Math.max(p,temp[i]-min);
+        min=Math.min(min,temp[i]);
+      }
+      
+      return p;
+	}
+}
