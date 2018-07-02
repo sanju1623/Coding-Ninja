@@ -1,0 +1,29 @@
+public class Solution {
+
+	public static String removeConsecutiveDuplicates(String s) {
+		// Write your code here
+        return findOutput(s.substring(1),""+s.charAt(0));
+	}
+  
+  
+  public static String findOutput(String s,String tillnow){
+    
+    //base case
+    if(s.length()==0)
+      {
+      return tillnow;
+      }
+    
+    //Small input
+    if(tillnow.charAt(tillnow.length()-1)!=s.charAt(0)){
+      tillnow=tillnow+s.charAt(0);
+    }
+   
+    
+    //processing
+    return findOutput(s.substring(1),tillnow);
+    
+  }
+  
+
+}
