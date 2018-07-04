@@ -1,0 +1,69 @@
+public class solution {
+
+  
+  public static String[] helper(int n){
+    if(n==2){
+      String[] temp = {"a","b","c"};
+      return temp;
+    }
+ 
+      else if(n==3){
+      String[] temp = {"d","e","f"};
+      return temp;
+    }
+    else if(n==4){
+      String[] temp = {"g","h","i"};
+      return temp;
+    }else if(n==5){
+      String[] temp = {"j","k","l"};
+      return temp;
+    }else if(n==6){
+      String[] temp = {"m","n","o"};
+      return temp;
+    }
+    else if(n==7){
+      String[] temp = {"p","q","r","s"};
+      return temp;
+    }else if(n==8){
+      String[] temp = {"t","u","v"};
+      return temp;
+    }
+    else if(n==9){
+      String[] temp = {"w","x","y","z"};
+      return temp;
+    }
+    String[] temp={""};
+    return temp;
+    
+  }
+	// Return a string array that contains all the possible strings
+	public static String[] keypad(int n){
+		// Write your code here
+    if(n==0)
+    {
+     String[] ans={""};
+      return ans;
+    } 
+      String small[]=keypad(n/10);
+      
+      String t[]=helper(n%10);
+      String out[]=new String[t.length*(small.length)];
+      if(small.length==1)
+      {
+     out=helper(n%10);
+   
+      }
+      else
+      {
+        int k=0;
+      for(int i=0;i<t.length;i++){
+        for(int j=0;j<small.length;j++){
+          out[k++]=small[j]+t[i];
+        }
+       }
+      }  
+        
+      return out;
+      //return keypad(n/10); 
+	}	
+}
