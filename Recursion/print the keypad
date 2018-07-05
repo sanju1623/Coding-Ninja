@@ -1,0 +1,82 @@
+public class solution {
+
+	public static void printKeypad(int input){
+		// Write your code here
+	 String[] temp = {""};
+     
+      getoutput( input, temp);
+      
+	}
+  
+  
+  public static void getoutput(int input,String[] output){
+    
+    if(input==0){
+      for(int i=0;i<output.length;i++)
+      System.out.println(output[i]);
+      return;
+    }
+    
+    
+   
+    int l=input%10;
+    String[] temp=helper(l);
+    String[] p=new String[temp.length*output.length];
+    if(output.length==1){
+     for(int i=0;i<temp.length;i++)
+       p[i]=temp[i];
+   }
+    else{
+      int k=0;
+      for(int i=0;i<output.length;i++){
+        for(int j=0;j<temp.length;j++)
+        {
+          p[k++]=temp[j]+output[i];
+        }
+      }
+      
+    }
+    
+ 
+    getoutput(input/10,p);
+   
+  }
+  
+  
+  public static String[] helper(int n){
+    if(n==2){
+      String[] temp = {"a","b","c"};
+      return temp;
+    }
+ 
+      else if(n==3){
+      String[] temp = {"d","e","f"};
+      return temp;
+    }
+    else if(n==4){
+      String[] temp = {"g","h","i"};
+      return temp;
+    }else if(n==5){
+      String[] temp = {"j","k","l"};
+      return temp;
+    }else if(n==6){
+      String[] temp = {"m","n","o"};
+      return temp;
+    }
+    else if(n==7){
+      String[] temp = {"p","q","r","s"};
+      return temp;
+    }else if(n==8){
+      String[] temp = {"t","u","v"};
+      return temp;
+    }
+    else if(n==9){
+      String[] temp = {"w","x","y","z"};
+      return temp;
+    }
+    String[] temp={""};
+    return temp;
+    
+  }
+  
+}
