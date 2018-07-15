@@ -1,0 +1,44 @@
+Statement:-
+Given an integer array of size 2N + 1. In this given array, N numbers are present twice and 
+one number is present only once in the array.
+You need to find and return that number which is unique in the array.
+
+
+
+import java.util.*;
+
+
+
+public class FindUnique{	
+
+	public static int findUnique(int[] arr){
+		/* Your class should be named FindUnique
+		 * Don't write main().
+		 * Don't read input, it is passed as function argument.
+		 * Return output and don't print it.
+	 	 * Taking input and printing output is handled automatically.
+		 */
+      
+      HashMap<Integer,Integer>map=new HashMap<Integer,Integer>();
+      
+      int out=0;
+        for(int i=0;i<arr.length;i=i++){
+        
+          if(map.containsKey(arr[i]))
+              map.put(arr[i],2);
+           else{
+              map.put(arr[i],1);
+              }
+        }
+      
+      for(int i=0;i<arr.length;i++){
+        if(map.get(arr[i])==1)
+          out=arr[i];
+      }
+      
+      
+      return out;
+      
+        
+	}
+}
