@@ -1,0 +1,23 @@
+public class HelloWorld{
+
+     public static void main(String []args){
+        System.out.println("Hello World");
+        
+      permutation("","abcd");
+     }
+     
+public static void permutation(String perm,String word){
+       
+    if(word.length()==0){
+      System.out.println(perm);
+    }
+    
+    
+    else
+    for(int i=0;i<word.length();i++){
+      permutation(perm+word.charAt(i),word.substring(0,i)+word.substring(i+1));   
+     }
+  }
+     
+     
+}
